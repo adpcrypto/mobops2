@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "748280385300",
+    "firebase_url": "https://navasahayog-trial.firebaseio.com",
+    "project_id": "navasahayog-trial",
+    "storage_bucket": "navasahayog-trial.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748280385300:android:2f5e5f8e3ee967e84c7c01",
+        "android_client_info": {
+          "package_name": "com.tensors.navasahayog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "748280385300-bbh12i0ni260k85rh8mf9dfk74alssgr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASxp28jqhmF2APLJUQlCNGEvO2IYSetdY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "748280385300-bbh12i0ni260k85rh8mf9dfk74alssgr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
