@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Navasahayog</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab1">Daily</string>
+    <string name="tab2">Issues</string>
+    <string name="tab3">History</string>
+    <string name="tab4">Student Details</string>
 </resources>
