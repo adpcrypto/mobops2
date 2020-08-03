@@ -46,6 +46,7 @@ public class details extends Fragment {
     TableLayout tableLayout;
     FirebaseFirestore db;
     FirebaseUser user;
+    View view;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -58,7 +59,7 @@ public class details extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_details, container, false);
+        view = inflater.inflate(R.layout.fragment_details, container, false);
         textName = view.findViewById(R.id.textViewName);
         textMail = view.findViewById(R.id.textViewMail);
         textVillage = view.findViewById(R.id.textViewVillage);
@@ -99,7 +100,7 @@ public class details extends Fragment {
                 map.put("Name",textName.getText().toString());
                 map.put("Email",textMail.getText().toString());
                 map.put("Village",textVillage.getText().toString());
-                db.collection(user.getEmail()).document("Details").set(map, SetOptions.merge()).addOnSuccessListener(new OnSuccessListener<Void>() {
+                db.collection(user.getEmail()).document("De tails").set(map, SetOptions.merge()).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
                         Toast.makeText(getView().getContext(),"Data Successfully updated",Toast.LENGTH_SHORT).show();
@@ -110,17 +111,6 @@ public class details extends Fragment {
         return view;
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        getStudents();
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        getStudents();
-    }
 
 
     private void getStudents() {
@@ -131,12 +121,12 @@ public class details extends Fragment {
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 tableLayout.removeAllViews();
                 int i=1;
-                tableLayout = getView().findViewById(R.id.tableLayout);
-                TableRow row1= new TableRow(getView().getContext());
+                tableLayout = view.findViewById(R.id.tableLayout);
+                TableRow row1= new TableRow(getContext());
                 TableRow.LayoutParams lp1 = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
                 row1.setLayoutParams(lp1);
-                TextView nm1 = new TextView(getView().getContext());
-                TextView rl1 = new TextView(getView().getContext());
+                TextView nm1 = new TextView(getContext());
+                TextView rl1 = new TextView(getContext());
                 nm1.setText("Name");
                 rl1.setText("Roll no");
                 nm1.setPadding(35,35,35,35);
@@ -148,19 +138,19 @@ public class details extends Fragment {
                 tableLayout.addView(row1,0);
 
                 for(final DocumentSnapshot doc: task.getResult()){
-                    TableRow row= new TableRow(getView().getContext());
+                    TableRow row= new TableRow(getContext());
                     TableRow.LayoutParams lp = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
                     row.setLayoutParams(lp);
                     Student student1 = doc.toObject(Student.class);
 
-                    TextView nm = new TextView(getView().getContext());
-                    TextView  rl = new TextView(getView().getContext());
-                    Button button = new Button(getView().getContext());
+                    TextView nm = new TextView(getContext());
+                    TextView  rl = new TextView(getContext());
+                    Button button = new Button(getContext());
                     button.setText("Update");
                     button.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            Intent intent = new Intent(getView().getContext(),addOrUpdate.class);
+                            Intent intent = new Intent(getContext(),addOrUpdate.class);
                             intent.putExtra("What","UPDATE");
                             intent.putExtra("ID",doc.getId());
                             startActivity(intent);
@@ -191,27 +181,6 @@ public class details extends Fragment {
         }
         return sb.toString();
     }
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        deleteTempFiles(getContext().getCacheDir());
-        deleteTempFiles(getContext().getExternalCacheDir());
-        deleteTempFiles(getContext().getExternalFilesDir(Environment.DIRECTORY_PICTURES));
-    }
 
-    private boolean deleteTempFiles(File file) {
-        if (file.isDirectory()) {
-            File[] files = file.listFiles();
-            if (files != null) {
-                for (File f : files) {
-                    if (f.isDirectory()) {
-                        deleteTempFiles(f);
-                    } else {
-                        f.delete();
-                    }
-                }
-            }
-        }
-        return file.delete();
-    }
+
 }

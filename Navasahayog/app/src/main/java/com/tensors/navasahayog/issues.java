@@ -15,11 +15,9 @@ import java.io.File;
 public class issues extends Fragment {
 
 
-
     public issues() {
         // Required empty public constructor
     }
-
 
 
     @Override
@@ -34,27 +32,5 @@ public class issues extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_issues, container, false);
     }
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        deleteTempFiles(getContext().getCacheDir());
-        deleteTempFiles(getContext().getExternalCacheDir());
-        deleteTempFiles(getContext().getExternalFilesDir(Environment.DIRECTORY_PICTURES));
-    }
-
-    private boolean deleteTempFiles(File file) {
-        if (file.isDirectory()) {
-            File[] files = file.listFiles();
-            if (files != null) {
-                for (File f : files) {
-                    if (f.isDirectory()) {
-                        deleteTempFiles(f);
-                    } else {
-                        f.delete();
-                    }
-                }
-            }
-        }
-        return file.delete();
-    }
 }
+

@@ -41,8 +41,6 @@ public class MainActivity extends AppCompatActivity {
         theight = tabLayout.getHeight();
         viewPager.getLayoutParams().height = height - theight ;
         viewPager.requestLayout();
-        Toast.makeText(this,"Clearing app cache and data occassionally is recommended..",Toast.LENGTH_LONG).show();
-
 
 
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
@@ -99,29 +97,8 @@ public class MainActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        deleteTempFiles(getCacheDir());
-        deleteTempFiles(getExternalCacheDir());
-        deleteTempFiles(getExternalFilesDir(Environment.DIRECTORY_PICTURES));
-    }
 
-    private boolean deleteTempFiles(File file) {
-        if (file.isDirectory()) {
-            File[] files = file.listFiles();
-            if (files != null) {
-                for (File f : files) {
-                    if (f.isDirectory()) {
-                        deleteTempFiles(f);
-                    } else {
-                        f.delete();
-                    }
-                }
-            }
-        }
-        return file.delete();
-    }
+
 
 
 }
