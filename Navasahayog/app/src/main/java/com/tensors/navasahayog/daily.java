@@ -93,9 +93,6 @@ public class daily extends Fragment {
         videoURI.clear();
         vidcounter=0;
         counter=0;
-        deleteTempFiles(getContext().getCacheDir());
-        deleteTempFiles(getContext().getExternalCacheDir());
-        deleteTempFiles(getContext().getExternalFilesDir(Environment.DIRECTORY_PICTURES));
     }
 
     Button click,upload,attendance,video;
@@ -127,7 +124,7 @@ public class daily extends Fragment {
         upload = view.findViewById(R.id.button6);
         video = view.findViewById(R.id.button7);
         attendance = view.findViewById(R.id.attendance);
-        Log.d("asds",""+counter);
+        //mydb.execSQL("DROP TABLE IF  EXISTS PhotoVideo;");
         refresh();
         getAllStudents();
         final Calendar myCalendar = Calendar.getInstance();
@@ -274,7 +271,7 @@ public class daily extends Fragment {
                     return;
                 }
                 mydb.execSQL("CREATE TABLE IF NOT EXISTS PhotoVideo(Date DATE UNIQUE,Photo VARCHAR(50),Video VARCHAR(50));");
-                String photos =null,videos=null;
+                String photos ="",videos="";
                 for(int j=0;j<photoURI.size();j++){
                     photos = photos + photoURI.get(j).toString()+",";
                 }
