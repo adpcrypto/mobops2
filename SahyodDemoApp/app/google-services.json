@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "279762961017",
+    "firebase_url": "https://sahyog-tensors-db.firebaseio.com",
+    "project_id": "sahyog-tensors-db",
+    "storage_bucket": "sahyog-tensors-db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279762961017:android:8d95cfaa531ba0a5608aa8",
+        "android_client_info": {
+          "package_name": "com.tensors.SahyogDemoApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "279762961017-btq1rabhjrkcu6ki643tr650l45fcikr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAT3Ow1pV8g1ql9KdhSXxrLaLeW_s_es9w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "279762961017-btq1rabhjrkcu6ki643tr650l45fcikr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

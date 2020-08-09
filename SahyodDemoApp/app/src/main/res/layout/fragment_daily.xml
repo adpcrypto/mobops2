@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".daily">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:hint="@string/commenthint"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/commentHead"
+            app:layout_constraintTop_toBottomOf="@+id/commentHead" />
+
+        <TextView
+            android:id="@+id/commentHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/Commenthead"
+            android:background="@drawable/but"
+            android:backgroundTint="#C7F3F8"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintStart_toStartOf="@+id/cameraHead"
+            app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+        <TextView
+            android:id="@+id/cameraHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/CameraHead"
+            android:background="@drawable/but"
+            android:backgroundTint="#C7F3F8"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintStart_toStartOf="@+id/activityHead"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            style="@android:style/Widget.Holo.ScrollView"
+            android:layout_width="380dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/borderlineblue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editto">
+
+            <LinearLayout
+                android:id="@+id/Activitylayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+        <Button
+            android:id="@+id/updateactbtn"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:text="@string/updateactivitybtn"
+            app:layout_constraintBottom_toBottomOf="@+id/editto"
+            app:layout_constraintEnd_toEndOf="@+id/activityattendbtn"
+            app:layout_constraintTop_toTopOf="@+id/editto" />
+
+        <TextView
+            android:id="@+id/activitytimeHead3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/timehead"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintBottom_toTopOf="@+id/editfrom"
+            app:layout_constraintStart_toStartOf="@+id/editfrom" />
+
+        <EditText
+            android:id="@+id/editfrom"
+            style="@android:style/Widget.Holo.EditText"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/fromactivity"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toStartOf="@+id/activityHead"
+            app:layout_constraintTop_toBottomOf="@+id/activityspinner" />
+
+        <EditText
+            android:id="@+id/editto"
+            style="@android:style/Widget.Holo.EditText"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/toactivity"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintBottom_toBottomOf="@+id/editfrom"
+            app:layout_constraintStart_toEndOf="@+id/editfrom"
+            app:layout_constraintTop_toTopOf="@+id/editfrom" />
+
+        <Button
+            android:id="@+id/activityattendbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="@string/attendactivitybtn"
+            app:layout_constraintBottom_toBottomOf="@+id/activityspinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/activityspinner" />
+
+        <TextView
+            android:id="@+id/activitylistHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/select_activity"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toStartOf="@+id/activityHead"
+            app:layout_constraintTop_toBottomOf="@+id/activityHead" />
+
+        <Spinner
+            android:id="@+id/activityspinner"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:prompt="@string/activityhint"
+            android:spinnerMode="dialog"
+            app:layout_constraintStart_toStartOf="@+id/activitylistHead"
+            app:layout_constraintTop_toBottomOf="@+id/activitylistHead" />
+
+        <TextView
+            android:id="@+id/activityHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/but"
+            android:backgroundTint="#C7F3F8"
+            android:text="@string/activityhead"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintStart_toStartOf="@+id/attendanceHead"
+            app:layout_constraintTop_toBottomOf="@+id/attendance" />
+
+        <TextView
+            android:id="@+id/attendanceHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/attndhead"
+            android:background="@drawable/but"
+            android:backgroundTint="#C7F3F8"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintStart_toStartOf="@+id/dateHead"
+            app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+
+        <TextView
+            android:id="@+id/dateHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/but"
+            android:backgroundTint="#C7F3F8"
+            android:text="@string/datehead"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_marginStart="16dp"
+            android:text="@string/videobtn"
+            app:layout_constraintBottom_toBottomOf="@+id/button5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button5"
+            app:layout_constraintTop_toTopOf="@+id/button5" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/but"
+            android:text="@string/savebtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/imgbtn"
+            app:layout_constraintStart_toStartOf="@+id/cameraHead"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="390dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/borderlineblue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cameraHead">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/edittext"
+            android:ems="10"
+            android:focusable="false"
+            android:inputType="date"
+            android:text="@string/editdatetxt"
+            app:layout_constraintStart_toStartOf="@+id/dateHead"
+            app:layout_constraintTop_toBottomOf="@+id/dateHead" />
+
+        <Button
+            android:id="@+id/attendance"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/AttendanceBtn"
+            app:layout_constraintStart_toStartOf="@+id/attendanceHead"
+            app:layout_constraintTop_toBottomOf="@+id/attendanceHead" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="monospace"
+            android:text="Daily Report"
+            android:background="@drawable/borderlineblue"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

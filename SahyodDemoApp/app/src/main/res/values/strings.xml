@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">SahyodDemoApp</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab1">Daily</string>
+    <string name="tab2">Issues</string>
+    <string name="tab3">History</string>
+    <string name="tab4">Student Details</string>
+    <string name="AttendanceBtn">Take Attendance</string>
+    <string name="finished">Finished</string>
+    <string name="caltxt">Open Calendar</string>
+    <string name="editdatetxt">Enter Date</string>
+    <string name="datehead"><u>1.) Date</u></string>
+    <string name="attndhead"><u>2.) Attendance</u></string>
+    <string name="activityhead"><u>3.) Activities</u></string>
+    <string name="activityhint"><u>Select Activity</u></string>
+    <string name="select_activity">Select Activity</string>
+    <string name="fromactivity">From</string>
+    <string name="toactivity">To</string>
+    <string name="attendactivitybtn">Students Attended</string>
+    <string name="hypen">--</string>
+    <string name="timehead">Time of Activity</string>
+    <string name="updateactivitybtn">Add Activity</string>
+    <string name="CameraHead">4.)Take Pictures/Videos</string>
+    <string name="commenthint">Enter Comments/Remarks (Optional)</string>
+    <string name="Commenthead">5.)Remarks</string>
+    <string name="Removebtn">Remove</string>
+    <string name="imgbtn">Capture Image</string>
+    <string name="videobtn">Capture Video</string>
+    <string name="savebtn">Save and Add to Pending</string>
+    <string name="submitbtn">Submit</string>
+    <string name="submit">Submit</string>
+    <string name="checkhead"><u>1)Check Book /Asset Availability</u></string>
+    <string name="issuehead"><u>2)Issue a Book/Asset</u></string>
+    <string name="returnhead"><u>3)Return a Book/Asset</u></string>
+</resources>
