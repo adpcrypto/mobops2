@@ -1,0 +1,22 @@
+com/adpcrypto/myapplication/ui/gallery/GalleryViewModel.java
+ com.adpcrypto.myapplication.ui.gallery.GalleryViewModel
+com/adpcrypto/myapplication/ui/home/HomeViewModel.java
+ com.adpcrypto.myapplication.ui.home.HomeViewModel
+com/adpcrypto/myapplication/ProfileActivity.java
+ com.adpcrypto.myapplication.ProfileActivity
+ com.adpcrypto.myapplication.ProfileActivity$1
+com/adpcrypto/myapplication/ui/gallery/GalleryFragment.java
+ com.adpcrypto.myapplication.ui.gallery.GalleryFragment
+ com.adpcrypto.myapplication.ui.gallery.GalleryFragment$1
+com/adpcrypto/myapplication/ui/slideshow/SlideshowViewModel.java
+ com.adpcrypto.myapplication.ui.slideshow.SlideshowViewModel
+com/adpcrypto/myapplication/MainActivity.java
+ com.adpcrypto.myapplication.MainActivity
+com/adpcrypto/myapplication/BuildConfig.java
+ com.adpcrypto.myapplication.BuildConfig
+com/adpcrypto/myapplication/ui/slideshow/SlideshowFragment.java
+ com.adpcrypto.myapplication.ui.slideshow.SlideshowFragment
+ com.adpcrypto.myapplication.ui.slideshow.SlideshowFragment$1
+com/adpcrypto/myapplication/ui/home/HomeFragment.java
+ com.adpcrypto.myapplication.ui.home.HomeFragment
+ com.adpcrypto.myapplication.ui.home.HomeFragment$1

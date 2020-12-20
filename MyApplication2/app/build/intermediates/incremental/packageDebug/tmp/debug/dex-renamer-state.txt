@@ -1,0 +1,4 @@
+#Fri Dec 04 09:31:52 IST 2020
+base.0=C\:\\Users\\adp\\Desktop\\MyApplication2\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
